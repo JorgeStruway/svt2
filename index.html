@@ -42,22 +42,20 @@
             position: relative;
         }
 
-        .logo-area {
+        /* ESPACIO VACÍO EN LA BARRA PARA EL FUTURO LOGO DE TECNOCONCIENTE */
+        .logo-placeholder {
             position: absolute;
             left: 25px;
-            top: 15px;
-            z-index: 1010;
-        }
-
-        .school-logo {
-            width: 75px;
-            height: 75px;
-            object-fit: contain;
+            width: 50px;
+            height: 50px;
+            border: 2px dashed rgba(255, 255, 255, 0.4);
             border-radius: 50%;
-            border: 3px solid #fff;
-            background: white;
-            padding: 2px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.7rem;
+            text-align: center;
         }
 
         .site-title {
@@ -95,6 +93,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+        }
+
+        /* LOGO DEL COLEGIO FLOTANDO EN LA ESQUINA SUPERIOR IZQUIERDA (SOLO EN INDEX) */
+        .school-logo-floating {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 85px;
+            height: 85px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background: white;
+            padding: 3px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            z-index: 10;
         }
 
         .hero-content { max-width: 800px; }
@@ -140,8 +155,57 @@
         .mv-card h3 { font-size: 1.6rem; color: var(--bg-dark); margin-bottom: 1rem; font-weight: 700; }
         .mv-card p { color: #1e293b; font-size: 1.08rem; line-height: 1.7; }
 
+        /* SECCIÓN DE TARJETAS DE ACCESO RÁPIDO PARA LLENAR LA PÁGINA PRINCIPAL */
+        .quick-nav-section {
+            max-width: 1100px;
+            margin: 4rem auto 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .quick-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .quick-card {
+            background: var(--card-bg);
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+            max-width: 330px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .quick-card h3 { font-size: 1.4rem; color: var(--bg-dark); margin-bottom: 0.8rem; }
+        .quick-card p { color: #475569; font-size: 1rem; margin-bottom: 1.5rem; }
+
+        .quick-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0 auto;
+        }
+
         .section-space {
-            padding: 6rem 1.5rem 2rem 1.5rem;
+            padding: 5rem 1.5rem 2rem 1.5rem;
         }
 
         .section-header {
@@ -167,7 +231,7 @@
             background-color: var(--bg-dark);
             color: #94a3b8;
             padding: 4rem 2rem 2rem 2rem;
-            margin-top: 8rem;
+            margin-top: 6rem;
         }
 
         .footer-grid {
@@ -199,7 +263,8 @@
 <body>
 
     <header>
-        <div class="logo-area"><img src="logo.png" alt="Logo Colegio" class="school-logo"></div>
+        <!-- ESPACIO RESERVADO PARA EL FUTURO LOGO -->
+        <div class="logo-placeholder">LOGO</div>
         <div class="site-title">TecnoConciente</div>
         <nav>
             <a href="index.html" class="active">Inicio</a>
@@ -210,6 +275,9 @@
     </header>
 
     <section class="hero">
+        <!-- LOGO DEL COLEGIO FLOTANDO EN LA ESQUINA SUPERIOR IZQUIERDA -->
+        <img src="logo.png" alt="Logo Colegio Pablo L. Ávila" class="school-logo-floating">
+        
         <div class="hero-content">
             <h1>Sembrando Valores con la Tecnología</h1>
             <p>Promoviendo una convivencia digital sana y el cumplimiento de las normas dentro de nuestra institución educativa.</p>
@@ -231,6 +299,33 @@
             <div class="mv-card">
                 <h3>Visión</h3>
                 <p>Nuestra visión es que esta plataforma sea un medio que impulse una cultura de valores en la institución, para lograr una comunidad educativa más unida, respetuosa y comprometida mediante el uso de la tecnología.</p>
+            </div>
+        </div>
+
+        <!-- TARJETAS DE ACCESO RÁPIDO PARA RELLENAR LA PORTADA -->
+        <div class="quick-nav-section">
+            <div class="quick-grid">
+                <a href="areas.html" class="quick-card">
+                    <div>
+                        <h3>Áreas de Acción</h3>
+                        <p>Explora los campos específicos donde aplicamos la tecnología para mejorar la convivencia escolar.</p>
+                    </div>
+                    <span class="quick-btn">Ver Áreas</span>
+                </a>
+                <a href="valores.html" class="quick-card">
+                    <div>
+                        <h3>Nuestros 4 Valores</h3>
+                        <p>Descubre los principios fundamentales elegidos por los estudiantes a través de nuestra encuesta.</p>
+                    </div>
+                    <span class="quick-btn">Ver Valores</span>
+                </a>
+                <a href="normas.html" class="quick-card">
+                    <div>
+                        <h3>Normas de Convivencia</h3>
+                        <p>Revisa el reglamento institucional y los flyers informativos orientados al orden y respeto.</p>
+                    </div>
+                    <span class="quick-btn">Ver Normas</span>
+                </a>
             </div>
         </div>
     </section>
