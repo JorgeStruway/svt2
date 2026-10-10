@@ -42,12 +42,11 @@
             position: relative;
         }
 
-        /* ESPACIO RESERVADO 40% MÁS GRANDE PARA EL FUTURO LOGO EN OTRAS PÁGINAS */
         .logo-placeholder {
             position: absolute;
             left: 25px;
-            width: 110px;
-            height: 112px;
+            width: 70px;
+            height: 70px;
             border: 2px dashed rgba(255, 255, 255, 0.4);
             border-radius: 50%;
             display: flex;
@@ -96,16 +95,14 @@
             position: relative;
         }
 
-        /* LOGO DEL COLEGIO FLOTANDO 40% MÁS GRANDE EN LA PORTADA */
         .school-logo-floating {
             position: absolute;
             top: 20px;
             left: 25px;
-            width: 150px;
-            height: 150px;
+            width: 135px;
+            height: 140px;
             object-fit: contain;
             background: transparent;
-            padding: 4px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.4);
             z-index: 10;
         }
@@ -127,6 +124,40 @@
         }
 
         .btn-main:hover { background-color: var(--accent-gray); }
+
+        .section-space {
+            padding: 5rem 1.5rem 2rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem 2.5rem;
+            background: #fdfbf7;
+            border: 2px solid var(--primary-blue);
+            outline: 4px solid #fdfbf7;
+            outline-offset: -6px;
+            border-radius: 6px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+
+        .section-header h3 { font-size: 0.9rem; letter-spacing: 2px; color: var(--accent-gray); text-transform: uppercase; margin-bottom: 0.4rem; font-weight: bold; }
+        .section-header h2 { font-size: 2.2rem; color: var(--bg-dark); margin-bottom: 0.8rem; }
+        .section-header p { color: #1e293b; font-size: 1.12rem; line-height: 1.7; font-weight: 400; }
+
+        /* TEXTO FLOTANTE SIN CUADRO (Opción 2) */
+        .intro-text-clean {
+            max-width: 800px;
+            margin: 0 auto 3.5rem auto;
+            text-align: center;
+            font-size: 1.15rem;
+            color: #2c3e50;
+            line-height: 1.8;
+            padding: 0 1rem;
+        }
 
         .mission-vision-container {
             display: flex;
@@ -153,9 +184,19 @@
         .mv-card h3 { font-size: 1.6rem; color: var(--bg-dark); margin-bottom: 1rem; font-weight: 700; }
         .mv-card p { color: #1e293b; font-size: 1.08rem; line-height: 1.7; }
 
+        /* SEPARADOR VISUAL ELEGANTE */
+        .content-divider {
+            max-width: 900px;
+            margin: 5rem auto 4rem auto;
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-blue), transparent);
+        }
+
+        /* TARJETAS DE ACCESO RÁPIDO MÁS COMPACTAS Y HORIZONTALES */
         .quick-nav-section {
             max-width: 1100px;
-            margin: 4rem auto 0 auto;
+            margin: 0 auto;
             padding: 0 1.5rem;
         }
 
@@ -163,18 +204,19 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .quick-card {
             background: var(--card-bg);
             border: 2px solid var(--primary-blue);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
-            width: 100%;
-            max-width: 330px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            flex: 1;
+            min-width: 260px;
+            max-width: 340px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             transition: transform 0.3s, box-shadow 0.3s;
             text-decoration: none;
             display: flex;
@@ -183,47 +225,25 @@
         }
 
         .quick-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
-        .quick-card h3 { font-size: 1.4rem; color: var(--bg-dark); margin-bottom: 0.8rem; }
-        .quick-card p { color: #475569; font-size: 1rem; margin-bottom: 1.5rem; }
+        .quick-card h3 { font-size: 1.2rem; color: var(--bg-dark); margin-bottom: 0.5rem; }
+        .quick-card p { color: #475569; font-size: 0.9rem; margin-bottom: 1rem; }
 
         .quick-btn {
             background-color: var(--primary-blue);
             color: white;
-            padding: 0.5rem 1.2rem;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             display: inline-block;
             margin: 0 auto;
         }
 
-        .section-space {
-            padding: 5rem 1.5rem 2rem 1.5rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3.5rem;
-            max-width: 850px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 2rem 2.5rem;
-            background: #fdfbf7;
-            border: 2px solid var(--primary-blue);
-            outline: 4px solid #fdfbf7;
-            outline-offset: -6px;
-            border-radius: 6px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-        }
-
-        .section-header h3 { font-size: 0.9rem; letter-spacing: 2px; color: var(--accent-gray); text-transform: uppercase; margin-bottom: 0.4rem; font-weight: bold; }
-        .section-header h2 { font-size: 2.2rem; color: var(--bg-dark); margin-bottom: 0.8rem; }
-        .section-header p { color: #1e293b; font-size: 1.12rem; line-height: 1.7; font-weight: 400; }
-
+        /* FOOTER ORIGINAL RESTAURADO CON CONTACTOS */
         footer {
             background-color: var(--bg-dark);
             color: #94a3b8;
@@ -233,27 +253,25 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
             max-width: 1100px;
             margin: 0 auto 3rem auto;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
-        .footer-col h4 { color: white; margin-bottom: 1rem; font-size: 1rem; }
+        .footer-col h4 { color: white; margin-bottom: 1.2rem; font-size: 1.05rem; }
         .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 0.5rem; }
-        .footer-col ul li a { color: #94a3b8; text-decoration: none; }
+        .footer-col ul li { margin-bottom: 0.6rem; }
+        .footer-col ul li a { color: #94a3b8; text-decoration: none; transition: color 0.3s; }
+        .footer-col ul li a:hover { color: white; }
 
         .footer-bottom {
             text-align: center;
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 1.5rem;
-            font-size: 0.75rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
+            font-size: 0.8rem;
+            color: #64748b;
         }
     </style>
 </head>
@@ -286,6 +304,12 @@
             <h2>Misión y Visión</h2>
             <p>Conoce los objetivos fundamentales que guían nuestro proyecto institucional en el Colegio Pablo L. Ávila.</p>
         </div>
+
+        <!-- TEXTO INTRODUCTORIO LIMPIO SOBRE EL FONDO -->
+        <p class="intro-text-clean">
+            Nuestra institución es nuestro segundo hogar, y el espacio virtual también forma parte de él. A través de este proyecto buscamos construir una comunidad unida, donde cada estudiante y docente entienda que los valores de respeto y empatía no solo se practican en el aula física, sino también en cada pantalla, chat y herramienta digital que utilizamos a diario.
+        </p>
+
         <div class="mission-vision-container">
             <div class="mv-card">
                 <h3>Misión</h3>
@@ -297,26 +321,30 @@
             </div>
         </div>
 
+        <!-- SEPARADOR VISUAL PARA DAR RESPIRO -->
+        <hr class="content-divider">
+
+        <!-- TARJETAS DE ACCESO RÁPIDO MÁS COMPACTAS -->
         <div class="quick-nav-section">
             <div class="quick-grid">
                 <a href="areas.html" class="quick-card">
                     <div>
                         <h3>Áreas de Acción</h3>
-                        <p>Explora los campos específicos donde aplicamos la tecnología para mejorar la convivencia escolar.</p>
+                        <p>Campos específicos donde aplicamos la tecnología escolar.</p>
                     </div>
                     <span class="quick-btn">Ver Áreas</span>
                 </a>
                 <a href="valores.html" class="quick-card">
                     <div>
                         <h3>Nuestros 4 Valores</h3>
-                        <p>Descubre los principios fundamentales elegidos por los estudiantes a través de nuestra encuesta.</p>
+                        <p>Principios fundamentales elegidos por los estudiantes.</p>
                     </div>
                     <span class="quick-btn">Ver Valores</span>
                 </a>
                 <a href="normas.html" class="quick-card">
                     <div>
                         <h3>Normas de Convivencia</h3>
-                        <p>Revisa el reglamento institucional y los flyers informativos orientados al orden y respeto.</p>
+                        <p>Reglamento institucional y flyers informativos.</p>
                     </div>
                     <span class="quick-btn">Ver Normas</span>
                 </a>
@@ -326,10 +354,34 @@
 
     <footer>
         <div class="footer-grid">
-            <div class="footer-col"><h4>Proyecto Escolar</h4><ul><li><a href="#">Colegio Pablo L. Ávila</a></li></ul></div>
-            <div class="footer-col"><h4>Secciones</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="areas.html">Áreas</a></li><li><a href="valores.html">Valores</a></li><li><a href="normas.html">Normas</a></li></ul></div>
+            <div class="footer-col">
+                <h4>Proyecto Escolar</h4>
+                <ul>
+                    <li>Colegio Nacional E.M.D. Gral. Pablo L. Ávila</li>
+                    <li>Bachillerato Técnico</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Secciones</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="areas.html">Áreas</a></li>
+                    <li><a href="valores.html">Valores</a></li>
+                    <li><a href="normas.html">Normas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Instagram: @tecnoconciente</li>
+                    <li>Teléfono: (021) XXX-XXX</li>
+                    <li>WhatsApp Institucional</li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-bottom"><span>&copy; 2026 TecnoConciente - Colegio Nacional E.M.D. Gral. Pablo L. Ávila</span></div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 TecnoConciente - Colegio Nacional E.M.D. Gral. Pablo L. Ávila. Todos los derechos reservados.</span>
+        </div>
     </footer>
 </body>
 </html>
