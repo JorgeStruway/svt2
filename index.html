@@ -96,7 +96,7 @@
             position: relative;
         }
 
-        /* LOGO DEL COLEGIO FLOTANDO EN LA ESQUINA SUPERIOR IZQUIERDA (SOLO EN INDEX) */
+     /* LOGO DEL COLEGIO FLOTANDO EN LA ESQUINA SUPERIOR IZQUIERDA (SOLO EN INDEX) */
         .school-logo-floating {
             position: absolute;
             top: 25px;
@@ -106,7 +106,12 @@
             object-fit: contain;
             border-radius: 50%;
             border: 3px solid #fff;
-            background: white;
+            mix-blend-mode: luminosity; 
+            background: transparent;
+            padding: 3px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            z-index: 10;
+        }
             padding: 3px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.4);
             z-index: 10;
