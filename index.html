@@ -31,7 +31,7 @@
         header {
             background-color: var(--bg-dark);
             color: var(--text-light);
-            padding: 1.2rem 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,19 +42,11 @@
             position: relative;
         }
 
-        .logo-placeholder {
+        .project-logo-header {
             position: absolute;
             left: 25px;
-            width: 70px;
-            height: 70px;
-            border: 2px dashed rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 0.75rem;
-            text-align: center;
+            height: 48px;
+            object-fit: contain;
         }
 
         .site-title {
@@ -129,7 +121,6 @@
             padding: 5rem 1.5rem 2rem 1.5rem;
         }
 
-        /* TEXTO ENSANCHADO CON CORCHETES LATERALES DECORATIVOS */
         .intro-quote-container {
             max-width: 1050px;
             margin: 0 auto 4rem auto;
@@ -218,7 +209,6 @@
             background: linear-gradient(to right, transparent, var(--primary-blue), transparent);
         }
 
-        /* NUEVOS BOTONES HORIZONTALES MODERNOS (OPCIÓN 2) EN FILA */
         .quick-nav-section {
             max-width: 1050px;
             margin: 0 auto;
@@ -300,7 +290,7 @@
 <body>
 
     <header>
-        <div class="logo-placeholder">LOGO</div>
+        <img src="logo-svt.jpeg" alt="Logo S.V.T." class="project-logo-header">
         <div class="site-title">TecnoConciente</div>
         <nav>
             <a href="index.html" class="active">Inicio</a>
@@ -321,7 +311,6 @@
     </section>
 
     <section class="section-space">
-        <!-- TEXTO CON CORCHETES LATERALES ESTÉTICOS -->
         <div class="intro-quote-container">
             <p class="intro-quote-text">
                 Nuestra institución es nuestro segundo hogar, y el espacio virtual también forma parte de él. A través de este proyecto buscamos construir una comunidad unida, donde cada estudiante y docente entienda que los valores de respeto y empatía no solo se practican en el aula física, sino también en cada pantalla, chat y herramienta digital que utilizamos a diario.
@@ -347,7 +336,6 @@
 
         <hr class="content-divider">
 
-        <!-- BOTONES HORIZONTALES MODERNOS (ADIÓS PIRÁMIDE) -->
         <div class="quick-nav-section">
             <div class="quick-buttons-row">
                 <a href="areas.html" class="nav-pill-btn">
