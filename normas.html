@@ -45,15 +45,15 @@
         .logo-placeholder {
             position: absolute;
             left: 25px;
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
             border: 2px dashed rgba(255, 255, 255, 0.4);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: rgba(255, 255, 255, 0.4);
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             text-align: center;
         }
 
@@ -154,6 +154,61 @@
             margin: 0 auto;
         }
 
+        .content-divider {
+            max-width: 900px;
+            margin: 5rem auto 3.5rem auto;
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-blue), transparent);
+        }
+
+        .quick-nav-section {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .quick-buttons-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .nav-pill-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            flex: 1;
+            min-width: 250px;
+            max-width: 320px;
+            justify-content: center;
+        }
+
+        .nav-pill-btn:hover {
+            background-color: var(--accent-gray);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
+        .nav-pill-btn span {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .nav-pill-btn:hover span {
+            transform: translateX(5px);
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -177,28 +232,30 @@
             background-color: var(--bg-dark);
             color: #94a3b8;
             padding: 4rem 2rem 2rem 2rem;
-            margin-top: 8rem;
+            margin-top: 6rem;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
             max-width: 1100px;
             margin: 0 auto 3rem auto;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
-        .footer-col h4 { color: white; margin-bottom: 1rem; font-size: 1rem; }
+        .footer-col h4 { color: white; margin-bottom: 1.2rem; font-size: 1.05rem; }
         .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 0.5rem; }
-        .footer-col ul li a { color: #94a3b8; text-decoration: none; }
+        .footer-col ul li { margin-bottom: 0.6rem; }
+        .footer-col ul li a { color: #94a3b8; text-decoration: none; transition: color 0.3s; }
+        .footer-col ul li a:hover { color: white; }
 
         .footer-bottom {
             text-align: center;
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 1.5rem;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
+            color: #64748b;
         }
     </style>
 </head>
@@ -270,6 +327,23 @@
                 <span class="badge-tag">Ver Flyers</span>
             </div>
         </div>
+
+        <hr class="content-divider">
+
+        <!-- BOTONES INFERIORES DE RETORNO Y NAVEGACIÓN -->
+        <div class="quick-nav-section">
+            <div class="quick-buttons-row">
+                <a href="index.html" class="nav-pill-btn">
+                    <span>&larr;</span> Volver al inicio
+                </a>
+                <a href="areas.html" class="nav-pill-btn">
+                    Áreas de Acción <span>&rarr;</span>
+                </a>
+                <a href="valores.html" class="nav-pill-btn">
+                    Nuestros Valores <span>&rarr;</span>
+                </a>
+            </div>
+        </div>
     </section>
 
     <div class="modal" id="imageModal" onclick="closeModal()">
@@ -280,10 +354,34 @@
 
     <footer>
         <div class="footer-grid">
-            <div class="footer-col"><h4>Proyecto Escolar</h4><ul><li><a href="#">Colegio Pablo L. Ávila</a></li></ul></div>
-            <div class="footer-col"><h4>Secciones</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="areas.html">Áreas</a></li><li><a href="valores.html">Valores</a></li><li><a href="normas.html">Normas</a></li></ul></div>
+            <div class="footer-col">
+                <h4>Proyecto Escolar</h4>
+                <ul>
+                    <li>Colegio Nacional E.M.D. Gral. Pablo L. Ávila</li>
+                    <li>Bachillerato Técnico</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Secciones</h4>
+                <ul>
+                    <li><a href="index.html">Volver al inicio</a></li>
+                    <li><a href="areas.html">Áreas</a></li>
+                    <li><a href="valores.html">Valores</a></li>
+                    <li><a href="normas.html">Normas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Instagram: @tecnoconciente</li>
+                    <li>Teléfono: (021) XXX-XXX</li>
+                    <li>WhatsApp Institucional</li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-bottom"><span>&copy; 2026 TecnoConciente - Colegio Nacional E.M.D. Gral. Pablo L. Ávila</span></div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 TecnoConciente - Colegio Nacional E.M.D. Gral. Pablo L. Ávila. Todos los derechos reservados.</span>
+        </div>
     </footer>
 
     <script>
