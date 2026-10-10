@@ -31,7 +31,7 @@
         header {
             background-color: var(--bg-dark);
             color: var(--text-light);
-            padding: 1.2rem 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,19 +42,11 @@
             position: relative;
         }
 
-        .logo-placeholder {
+        .project-logo-header {
             position: absolute;
             left: 25px;
-            width: 70px;
-            height: 70px;
-            border: 2px dashed rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 0.75rem;
-            text-align: center;
+            height: 48px;
+            object-fit: contain;
         }
 
         .site-title {
@@ -162,7 +154,6 @@
             background: linear-gradient(to right, transparent, var(--primary-blue), transparent);
         }
 
-        /* BOTONES DE NAVEGACIÓN RÁPIDA INFERIORES */
         .quick-nav-section {
             max-width: 1050px;
             margin: 0 auto;
@@ -262,7 +253,7 @@
 </head>
 <body>
     <header>
-        <div class="logo-placeholder">LOGO</div>
+        <img src="logo-svt.jpeg" alt="Logo S.V.T." class="project-logo-header">
         <div class="site-title">TecnoConciente</div>
         <nav>
             <a href="index.html">Inicio</a>
@@ -301,7 +292,6 @@
 
         <hr class="content-divider">
 
-        <!-- BOTONES INFERIORES DE RETORNO Y NAVEGACIÓN -->
         <div class="quick-nav-section">
             <div class="quick-buttons-row">
                 <a href="index.html" class="nav-pill-btn">
