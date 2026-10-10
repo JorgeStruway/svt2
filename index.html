@@ -129,16 +129,41 @@
             padding: 5rem 1.5rem 2rem 1.5rem;
         }
 
-        /* TEXTO INTRODUCTORIO ARRIBA, MÁS GRANDE Y OSCURO */
-        .intro-text-clean {
-            max-width: 900px;
-            margin: 0 auto 3rem auto;
+        /* TEXTO ENSANCHADO CON CORCHETES LATERALES DECORATIVOS */
+        .intro-quote-container {
+            max-width: 1050px;
+            margin: 0 auto 4rem auto;
+            padding: 1.5rem 3.5rem;
             text-align: center;
-            font-size: 1.28rem;
+            position: relative;
+        }
+
+        .intro-quote-container::before,
+        .intro-quote-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 25px;
+            height: 100%;
+            border-color: var(--primary-blue);
+            border-style: solid;
+        }
+
+        .intro-quote-container::before {
+            left: 0;
+            border-width: 3px 0 3px 3px;
+        }
+
+        .intro-quote-container::after {
+            right: 0;
+            border-width: 3px 3px 3px 0;
+        }
+
+        .intro-quote-text {
+            font-size: 1.22rem;
             color: #0b132b;
             font-weight: 500;
             line-height: 1.8;
-            padding: 0 1.5rem;
         }
 
         .section-header {
@@ -187,59 +212,58 @@
 
         .content-divider {
             max-width: 900px;
-            margin: 5rem auto 4rem auto;
+            margin: 5rem auto 3.5rem auto;
             border: none;
             height: 2px;
             background: linear-gradient(to right, transparent, var(--primary-blue), transparent);
         }
 
+        /* NUEVOS BOTONES HORIZONTALES MODERNOS (OPCIÓN 2) EN FILA */
         .quick-nav-section {
-            max-width: 1100px;
+            max-width: 1050px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        .quick-grid {
+        .quick-buttons-row {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 1.5rem;
         }
 
-        .quick-card {
-            background: var(--card-bg);
-            border: 2px solid var(--primary-blue);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-            flex: 1;
-            min-width: 260px;
-            max-width: 340px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .quick-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-
-        .quick-card h3 { font-size: 1.2rem; color: var(--bg-dark); margin-bottom: 0.5rem; }
-        .quick-card p { color: #475569; font-size: 0.9rem; margin-bottom: 1rem; }
-
-        .quick-btn {
+        .nav-pill-btn {
             background-color: var(--primary-blue);
             color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.05rem;
             font-weight: 600;
-            display: inline-block;
-            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            flex: 1;
+            min-width: 250px;
+            max-width: 320px;
+            justify-content: center;
+        }
+
+        .nav-pill-btn:hover {
+            background-color: var(--accent-gray);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
+        .nav-pill-btn span {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .nav-pill-btn:hover span {
+            transform: translateX(5px);
         }
 
         footer {
@@ -297,10 +321,12 @@
     </section>
 
     <section class="section-space">
-        <!-- TEXTO INTRODUCTORIO UBICADO ARRIBA, MÁS GRANDE Y OSCURO -->
-        <p class="intro-text-clean">
-            Nuestra institución es nuestro segundo hogar, y el espacio virtual también forma parte de él. A través de este proyecto buscamos construir una comunidad unida, donde cada estudiante y docente entienda que los valores de respeto y empatía no solo se practican en el aula física, sino también en cada pantalla, chat y herramienta digital que utilizamos a diario.
-        </p>
+        <!-- TEXTO CON CORCHETES LATERALES ESTÉTICOS -->
+        <div class="intro-quote-container">
+            <p class="intro-quote-text">
+                Nuestra institución es nuestro segundo hogar, y el espacio virtual también forma parte de él. A través de este proyecto buscamos construir una comunidad unida, donde cada estudiante y docente entienda que los valores de respeto y empatía no solo se practican en el aula física, sino también en cada pantalla, chat y herramienta digital que utilizamos a diario.
+            </p>
+        </div>
 
         <div class="section-header">
             <h3>Nuestro Propósito</h3>
@@ -321,28 +347,17 @@
 
         <hr class="content-divider">
 
+        <!-- BOTONES HORIZONTALES MODERNOS (ADIÓS PIRÁMIDE) -->
         <div class="quick-nav-section">
-            <div class="quick-grid">
-                <a href="areas.html" class="quick-card">
-                    <div>
-                        <h3>Áreas de Acción</h3>
-                        <p>Campos específicos donde aplicamos la tecnología escolar.</p>
-                    </div>
-                    <span class="quick-btn">Ver Áreas</span>
+            <div class="quick-buttons-row">
+                <a href="areas.html" class="nav-pill-btn">
+                    Áreas de Acción <span>&rarr;</span>
                 </a>
-                <a href="valores.html" class="quick-card">
-                    <div>
-                        <h3>Nuestros 4 Valores</h3>
-                        <p>Principios fundamentales elegidos por los estudiantes.</p>
-                    </div>
-                    <span class="quick-btn">Ver Valores</span>
+                <a href="valores.html" class="nav-pill-btn">
+                    Nuestros 4 Valores <span>&rarr;</span>
                 </a>
-                <a href="normas.html" class="quick-card">
-                    <div>
-                        <h3>Normas de Convivencia</h3>
-                        <p>Reglamento institucional y flyers informativos.</p>
-                    </div>
-                    <span class="quick-btn">Ver Normas</span>
+                <a href="normas.html" class="nav-pill-btn">
+                    Normas de Convivencia <span>&rarr;</span>
                 </a>
             </div>
         </div>
